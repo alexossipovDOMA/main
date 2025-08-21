@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>FromBoard Delivery</title>
+</head>
+<body>
+    <header class="header contain">
+        <div class="header__info">
+            <a class="logo header__logo" href="/">
+                <img  src="./image/Logo.svg" alt="From Board Delivery"/>
+            </a>
+            <div class="header__wrap">
+                <div class="header__text">
+                    Доставляем товары из заграницы в Россию <br/>
+                        Стоимость от 550 рублей за заказ <br/>
+                        1 $ = 93 ₽ | 1 € = 99 ₽ | 1 ¥ = 13 ₽
+                </div>
+                <div class="header__connection">
+                    <b class="header__connection-phone">
+                        +7 (800) 123 45-67
+                    </b>
+                    <span class="header__connection-comment">
+                        Звонки по России бесплатны
+                    </span>
+                </div>
+                <div class="header__burger">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="header__menu">
+            <ul class="header__menu-list">
+                <li class="header__menu-item">
+                    <a href="/">Калькулятор</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="/">О нас</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="/">Гарантии</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="/">Отзывы</a>
+                </li>
+            </ul>
+            <button class="button header__menu-btn">Оставить заявку</button>
+        </div>
+        <!--Появляется c 1535px и ниже-->
+        <ul class="header__infotext ">
+            <li class="header__infotext-item">
+                Доставляем товары <br/>
+                из заграницы в Россию
+            </li> 
+            <li class="header__infotext-item">
+                Стоимость от 550 рублей <br/>
+                за заказ
+            </li>
+            <li class="header__infotext-item">
+                1 $ = 93 ₽ | 1 € = 99 ₽ | 1 ¥ = 13 ₽
+            </li>
+        </ul>
+    </header>
+    <section class="calculator contain">
+        <div class="calculator__banner">
+            <div class="calculator__banner-wrap">
+                <h1 class="calculator__banner-title">
+                    Без проблемная доставка купленных вещей 
+                    из США, Европы и Азии в Россию
+                </h1>
+                <p class="calculator__banner-text" >
+                    Сэкономьте на покупках и наслаждайтесь мировыми брендами — 
+                    наш сервис позволяет вам легко и удобно заказывать товары со всего мира 
+                    и получать их в России
+                </p>
+            </div>
+            <img class="calculator__banner-img" src="./image/main-banner.jpg" alt="">          
+        </div>
+        <div class="calculator__form">
+            <h1 class="calculator__form-title">
+                Калькулятор доставки
+            </h1>
+            <p class="calculator__form-text">
+                Посчитайте, сколько будет стоить перевозка<br/>
+                покупки из зарубежа
+            </p>
+            
+            <form id="form"  method="post" autocomplete="off">
+                <input name="name" class="input-text" type="text" placeholder="Имя"/>
+                                                        
+
+                <fieldset>
+                    <input name="email" class="input-text" type="text" placeholder="Почта"/>
+                    <input name="area" class="input-text" type="text" placeholder="Общая площадь, м²"/>
+                    <input name="country" class="input-text" type="text" placeholder="Страна покупки"/>
+                    <input name="area_delivery" class="input-text" type="text" placeholder="Область доставки"/>
+                </fieldset>
+                    
+                <fieldset>
+                    <input name="tel" class="input-text" type="text" placeholder="Телефон"/>
+                    <input name="weight" class="input-text" type="text" placeholder="Вес, кг"/>
+                    <input name="city_purchase" class="input-text" type="text" placeholder="Город покупки"/>
+                    <input name="delivery_city" class="input-text" type="text" placeholder="Город доставки"/>
+                </fieldset>
+
+                <button type="submit" class="button calculator__form-btn">Заказать расчёт</button>
+            </form>
+        </div>
+    </section>
+    <section class="advantages contain">
+        <h1 class="advantages__title">Наши преимущества</h1>
+        <div class="advantages__items">
+
+            <div class="advantages__item">
+                <img src="./image/advantages/Board.svg" alt="">
+                <div class="advantages__item-text">
+                    <h2>Растоможка груза</h2>
+                    <p>Мы берём на себя все формальности 
+                        и бумажную волокиту, связанную с 
+                        растаможкой груза
+                    </p>
+                </div>
+            </div>
+            <div class="advantages__item">
+                <img src="./image/advantages/Package.svg" alt="">
+                <div class="advantages__item-text">
+                    <h2>Надёжная упаковка</h2>
+                    <p>Все товары упаковываются нашими 
+                        специалистами с особым вниманием 
+                        к деталям, гарантируя, что они дойдут 
+                        в безопасности и в отличном состоянии
+                    </p>
+                </div>
+            </div>
+            <div class="advantages__item">
+                <img src="./image/advantages/Delivery.svg" alt="">
+                <div class="advantages__item-text">
+                    <h2>Быстро и выгодно</h2>
+                    <p>Мы предлагаем быструю и выгодную 
+                        доставку, чтобы вы могли насладиться 
+                        покупками как можно скорее.
+                    </p>
+                </div>
+            </div>
+            <div class="advantages__item">
+                <img src="./image/advantages/best-support.svg" alt="">
+                <div class="advantages__item-text">
+                    <h2>Удобный сервис</h2>
+                    <p>Стремимся сделать процесс доставки 
+                        максимально удобным для вас, чтобы 
+                        опыт остался приятным и беззаботным
+                    </p>
+                </div>
+            </div>
+            <div class="advantages__item">
+                <img src="./image/advantages/clear-info.svg" alt="">
+                <div class="advantages__item-text">
+                    <h2>Прозрачность работы</h2>
+                    <p>Мы предоставляем полный контроль над
+                        каждым этапом доставки, от момента 
+                        заказа до момента прибытия заказа
+                    </p>
+                </div>
+            </div>
+            <div class="advantages__item">
+                <img src="./image/advantages/garantee.svg" alt="">
+                <div class="advantages__item-text">
+                    <h2>Страхование груза</h2>
+                    <p>Наше страхование обеспечивает полную 
+                        защиту и покрытие почти все неприятные 
+                        и неожиданные ситуации
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="documents contain">
+
+        <h1 class="documents__title">Гарантии качества</h1>
+        <p class="documents__text">
+            Наши гарантии качества включают в себя полный спектр 
+            документов, необходимых 
+            для ввоза и вывоза товаров, а также
+            для успешного бизнеса на мировом рынке. 
+            Мы предоставляем вам надёжность и уверенность
+        </p>
+
+        <div class="documents__items">
+            <div class="documents__item">
+                <img src="./image/documents/Registration-in-RF.png" alt="Свидетельство о регистрации в РФ">
+                <h2>Свидетельство о регистрации в РФ</h2>
+            </div>
+            <div class="documents__item">
+                <img src="./image/documents/Registration-in-USA.png" alt="Свидетельство о регистрации в США">
+                <h2>Свидетельство о регистрации в США</h2>
+            </div>
+            <div class="documents__item">
+                <img src="./image/documents/Registration-in-China.png" alt="Свидетельство о регистрации в Китае">
+                <h2>Свидетельство о регистрации в Китае</h2>
+            </div>
+            <div class="documents__item">
+                <img src="./image/documents/Registration-in-GreatBritain.png" alt="Свидетельство о регистрации в Великобритнии">
+                <h2>Свидетельство о регистрации в Великобритнии</h2>
+            </div>
+            <div class="documents__item">
+                <img src="./image/documents/Registration-in-RF.png" alt="">
+                <h2>Проба</h2>
+            </div>
+            <div class="documents__item">
+                <img src="./image/documents/Registration-in-RF.png" alt="">
+                <h2>Проба</h2>
+            </div>
+        </div>
+
+        <button class="documents__btn button">Показать больше документов</button>
+    </section>
+    <section class="feedback contain">
+        <h1 class="feedback__title">Отзывы</h1>
+        <div class="feedback__carousel">
+
+            <button class="feedback__btn-previous">
+                <img src="./image/btn-previous.svg" alt="">
+            </button>
+            <button class="feedback__btn-next">
+                <img src="./image/btn-next.svg" alt="">
+            </button>
+
+            <div class="feedback__carousel-contain">
+                <div class="feedback__carousel-wrap">
+                        <div class="feedback__carousel-item">
+                        <p>1Я заказала последний iPhone из США через ваш сервис, и доставка прошла быстро и без каких‑либо проблем. Гарантии качества и надёжная упаковка сделали мой опыт покупки невероятно позитивным</p>
+                        <span>Анна</span>
+                    </div>
+                    <div class="feedback__carousel-item">
+                        <p>2Я уже несколько лет заказываю дизайнерскую одежду из Франции через ваш сервис, и он никогда меня не подводил. Важно иметь надёжную компанию, которая позаботится о вашем заказе и предоставит все необходимые документы для ввоза в Россию</p>
+                        <span>Алексей</span>
+                    </div>
+                    <div class="feedback__carousel-item">
+                        <p>3Я уже несколько лет заказываю дизайнерскую одежду из Франции через ваш сервис, и он никогда меня не подводил. Важно иметь надежную компанию, которая позаботится о вашем заказе и предоставит все необходимые документы для ввоза в Россию</p>
+                        <span>Ольга</span>
+                    </div>
+                    <div class="feedback__carousel-item">
+                        <p>4Заказал шикарные часы из Швейцарии, и доставка была невероятно быстрой. Ваш сервис делает интернет-шоппинг более доступным и удобным</p>
+                        <span>Игорь</span>
+                    </div>
+                    <div class="feedback__carousel-item">
+                        <p>5Ваш сервис действительно изменил мой способ покупок. Я больше не переживаю о таможенных вопросах и документах - все у вас в порядке. Спасибо за ваше качество и надежность</p>
+                        <span>Екатерина</span>
+                    </div>
+                    <div class="feedback__carousel-item">
+                        <p>6Я заказал редкий антикварный предмет из Японии через ваш сервис, и остался впечатлен. Все пришло в отличном состоянии, и ваша гарантия качества действительно работает. Спасибо за ваше профессиональное обслуживание</p>
+                        <span>Дмитрий</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+    <section class="questions contain">
+        <div class="questions__wrap">
+
+            <h1 class="questions__title">Остались вопросы?</h1>
+            <form id="questions__form" class="questions__form" method="post" autocomplete="off">
+                <fieldset>
+                    <input name="name" type="text" placeholder="Имя">
+                    <input name="email" type="text" placeholder="Почта">
+                    <input name="tel" type="text" placeholder="Телефон">
+                    <input name="title" type="text" placeholder="Тема вопроса">
+                    <textarea name="message" type="text" placeholder="Сообщение..."></textarea>
+                </fieldset>
+                
+                <button class="questions__form-button button" type="submit">Оставить заявку</button>
+            </form>
+
+        </div>
+    </section>
+    <footer class="footer contain">
+        <div class="footer__logo">
+            <img src="./image/Logo-Lithe.svg" alt="FromBoard Delivery">
+            <p>2023 © Ни одно право не защищено, копируйте сколько влезет ☺</p>
+        </div>
+        <nav class="footer__menu">
+            <ul class="footer__menu-list">
+                <li>
+                    <a href="">Калькулятор</a>
+                </li>
+                <li>
+                    <a href="">О нас</a>
+                </li>
+                <li>
+                    <a href="">Гарантии</a>
+                </li>
+                <li>
+                    <a href="">Отзывы</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="footer__tel">
+            <a href="tel:+78001234567">+7 (800) 123 45-67</a>
+            <p>Звонки по России бесплатны</p>
+        </div>
+        <div class="footer__footnote">
+            <p>НЕ ЯВЛЯЕТСЯ ПУБЛИЧНОЙ ОФЕРТОЙ. Просим обратить внимание на то, что цены носят информационный и ознакомительный характер, а значит ни в какой мере не являются публичной офертой, которая определена в ст. 437 ГК РФ. Вся информация на сайте может содержать неточности, орфографические и иные ошибки, она не является полной, окончательно и исчерпывающей</p>
+            <p>Разработкой макета занимался лучший айтишник в мире</p>
+        </div>
+
+    </footer> 
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./index.js"></script>
+    <script src="./tg.js"></script>
+</body>
+</html>

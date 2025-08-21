@@ -1,0 +1,31 @@
+.contain {
+    max-width: 1920px;
+    min-width: 1537px;
+    margin: auto;
+    padding: 0 192px;
+}
+@media (max-width: 1536px) {
+    .contain {
+        max-width: 1536px;
+        min-width: 1025px;
+        margin: auto;
+        padding: 0 128px;
+    }
+}
+@media (max-width: 1024px) {
+    .contain {
+        max-width: 1024px;
+        min-width: 758px;
+        margin: auto;
+        padding: 0 80px;
+    }
+}
+@media (max-width: 758px) {
+    .contain {
+        max-width: 758px;
+        min-width: 100%;
+        margin: auto;
+        padding: 0 59px;
+    }
+}
+

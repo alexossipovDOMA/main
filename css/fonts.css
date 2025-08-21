@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Formular';
+    src: url(/fonts/Formular-Black.woff2) format(woff2);
+    font-weight: 900;
+}
+@font-face {
+    font-family: 'Formular';
+    src: url(/fonts/Formular-Bold.woff2) format(woff2);
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Formular';
+    src: url(/fonts/Formular-Regular.woff2) format(woff2);
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Formular';
+    src: url(/fonts/Formular-Light.woff2) format(woff2);
+    font-weight: 300;
+}
