@@ -1,8 +1,8 @@
-@import url(reset.css);
-@import url(root.css);
-@import url(contain.css);
-@import url(fonts.css);
-@import url(ui-components.css);
+@import url(./reset.css);
+@import url(./root.css);
+@import url(./contain.css);
+@import url(./fonts.css);
+@import url(./ui-components.css);
 
 body {
     background-color: #E5E7EB;
