@@ -56,3 +56,5 @@ function carousel () {
     })
 }
 carousel()
+
+console.log(42452)
