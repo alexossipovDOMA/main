@@ -269,7 +269,6 @@ button {
 }
 .calculator__form {
     width: 50%;
-    height: 584px;
     background-color: var(--gray-50);
     border-radius: 16px;
     padding: 24px 0;
@@ -319,7 +318,7 @@ button {
     height: 44px;
     margin-top: 4px;
 }
-@media (max-width: 1535px) {
+@media (max-width: 1536px) {
     .calculator {
         min-width: 100%;
         display: block;
@@ -353,7 +352,7 @@ button {
         width: 100%;
     }
 }
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
     .calculator {
         padding-top: 40px;
     }
@@ -366,6 +365,37 @@ button {
     .calculator__banner-img {
         width: 100%;
         position: relative;
+    }
+}
+@media (max-width: 650px) {
+    .calculator__banner {
+        margin-bottom: 25px;
+    }
+    .calculator__banner-title {
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 10px;
+    }
+    .calculator__banner-text {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 8px;
+    }
+    .calculator__form-title {
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 10px;
+    }
+    .calculator__form-text {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 16px;
+    }
+    .calculator__form {
+        padding: 15px 10px;
+    }
+    .calculator__form form fieldset {
+        min-width: 100%;
     }
 }
 
