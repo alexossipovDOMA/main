@@ -24,8 +24,7 @@ input {
     line-height: 24px;
 }
 .noScroll{
-    position: fixed;
-    overflow-y: scroll;
+    overflow: hidden;
 }
 button {
     border: none;
@@ -152,8 +151,10 @@ button {
         z-index: 100;    
     }
     .header.active { 
-        height: 100%;
-        outline: 100vh solid rgba(63, 63, 63, 0.596);   
+        border-radius: 0;
+        max-height: 100%;
+        outline: 100vh solid rgba(63, 63, 63, 0.596);  
+        overflow-y: scroll; 
     }
     .header__info {
         display: flex;
