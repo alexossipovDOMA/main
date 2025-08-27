@@ -520,6 +520,25 @@ button {
         height: 100%;
     }
 }
+@media (max-width: 650px) {
+    .advantages {
+        padding-top: 40px;
+    }
+    .advantages__title {
+        font-size: 22px;
+        line-height: 28px;
+        margin-bottom: 20px;
+    }
+    .advantages__item-text h2 {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 5px;
+    }
+    .advantages__item > img {
+        width: 80px;
+        height: 80px;
+    }
+}
 
 /*---documents---*/
 .documents {
