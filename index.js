@@ -3,10 +3,56 @@ const CLSHeader = document.querySelector('.header');
 const CLSHeaderBurger = document.querySelector('.header__burger');
 const CLSDocumentsBtn = document.querySelector('.documents__btn');
 const CLSDocumentsItem = document.querySelectorAll('.documents__item');
-const CLSFeedbackBtnPrevious = document.querySelector('.feedback__btn-previous');
-const CLSFeedbackBtnNext = document.querySelector('.feedback__btn-next');
-const CLSFeedbackCarouselWrap = document.querySelector('.feedback__carousel-wrap');
+const CLSFeedbackBtnPrevious = document.querySelector('.carousel-text-items__btn-previous');
+const CLSFeedbackBtnNext = document.querySelector('.carousel-text-items__btn-next');
+const CLSFeedbackCarouselWrap = document.querySelector('.carousel-text-items__wrap');
+const CLSFeedbackCarouselItem = document.querySelectorAll('.carousel-text-items__item');
 
+function carousel() {
+    let i = 0;
+    let num;
+
+    function valueForNum() {
+        if(window.innerWidth >= 1024) {
+            num = 2;
+        } else {
+            num = 1;
+        }
+    }
+
+    valueForNum()
+    window.addEventListener('resize', () => {
+        valueForNum()
+    })
+
+    /*Prev*/
+    CLSFeedbackBtnPrevious.addEventListener('click', () => {
+        let widthItem = CLSFeedbackCarouselItem[i].offsetWidth;
+
+        if(i === 0) {
+            i = CLSFeedbackCarouselItem.length - num;
+            CLSFeedbackCarouselWrap.scrollBy(widthItem * i, 0);
+            return;
+        }
+
+        CLSFeedbackCarouselWrap.scrollBy(-widthItem, 0);
+        i--;
+    })
+    /*Next*/
+    CLSFeedbackBtnNext.addEventListener('click', () => {
+        let widthItem = CLSFeedbackCarouselItem[i].offsetWidth;
+
+        if(i === CLSFeedbackCarouselItem.length - num) {
+            i = 0;
+            CLSFeedbackCarouselWrap.scrollTo(0, 0);
+            return;
+        }
+        
+        CLSFeedbackCarouselWrap.scrollBy(widthItem, 0);
+        i++;
+    })
+}
+carousel()
 
 CLSHeaderBurger.addEventListener('click', function() {
     CLSHeader.classList.toggle('active');
@@ -28,33 +74,4 @@ CLSDocumentsBtn.addEventListener('click', function() {
     
 })
 
-function carousel () {
-    let mi = 0;
-    let i = 0;
 
-    CLSFeedbackBtnNext.addEventListener('click', function() {
-        i += 2;
-        if(CLSDocumentsItem.length - 2 >= i) {
-            mi -= 102;
-        } else {
-            mi = 0;
-            i = 0;
-        }
-        CLSFeedbackCarouselWrap.style.marginLeft = mi + '%';
-        
-    })
-
-    CLSFeedbackBtnPrevious.addEventListener('click', function() {
-        i -= 2;
-        if(i >= 0) {
-            mi += 102;
-        } else {
-            mi = -51 * (CLSDocumentsItem.length - 2);
-            i = CLSDocumentsItem.length - 2;
-        }
-        CLSFeedbackCarouselWrap.style.marginLeft = mi + '%';
-    })
-}
-carousel()
-
-console.log(42452)
