@@ -11,6 +11,7 @@ const CLSFeedbackCarouselItem = document.querySelectorAll('.carousel-text-items_
 function carousel() {
     let i = 0;
     let num;
+    
 
     function valueForNum() {
         if(window.innerWidth >= 1024) {
@@ -24,35 +25,84 @@ function carousel() {
     window.addEventListener('resize', () => {
         valueForNum()
     })
+    /*Active item*/
+    let active = false;
+
+    CLSFeedbackCarouselItem.forEach((item) => {
+        item.addEventListener('click', () => {
+            active = true;
+            item.querySelector('.carousel-text-items__item-wrap')
+                .classList
+                .toggle('carousel-text-items__active');
+        })
+    })
+    
+  
+        CLSFeedbackCarouselWrap.addEventListener('scroll', () => {
+            if(active) {
+            CLSFeedbackCarouselItem.forEach((item) => {
+                item.querySelector('.carousel-text-items__item-wrap')
+                    .classList
+                    .remove('carousel-text-items__active');
+            })
+            }
+        })
+        
+    
+
+    
 
     /*Prev*/
     CLSFeedbackBtnPrevious.addEventListener('click', () => {
-        let widthItem = CLSFeedbackCarouselItem[i].offsetWidth;
-
+        
         if(i === 0) {
             i = CLSFeedbackCarouselItem.length - num;
-            CLSFeedbackCarouselWrap.scrollBy(widthItem * i, 0);
+            CLSFeedbackCarouselWrap.scrollTo({
+                top: 0,
+                left: CLSFeedbackCarouselWrap.scrollWidth, 
+            });
             return;
         }
 
-        CLSFeedbackCarouselWrap.scrollBy(-widthItem, 0);
+        let wrapX = Math.round(CLSFeedbackCarouselWrap.getBoundingClientRect().x);
+        let itemX = Math.round(CLSFeedbackCarouselItem[i - 1].getBoundingClientRect().x);
+        let differenceX = itemX - wrapX;
+
+        CLSFeedbackCarouselWrap.scrollBy({
+            top: 0,
+            left: differenceX, 
+        });
         i--;
+
+        
     })
     /*Next*/
     CLSFeedbackBtnNext.addEventListener('click', () => {
-        let widthItem = CLSFeedbackCarouselItem[i].offsetWidth;
 
         if(i === CLSFeedbackCarouselItem.length - num) {
             i = 0;
-            CLSFeedbackCarouselWrap.scrollTo(0, 0);
+            CLSFeedbackCarouselWrap.scrollTo({
+                top: 0,
+                left: 0, 
+            });
             return;
         }
-        
-        CLSFeedbackCarouselWrap.scrollBy(widthItem, 0);
+
+        let wrapX = Math.round(CLSFeedbackCarouselWrap.getBoundingClientRect().x);
+        let itemX = Math.round(CLSFeedbackCarouselItem[i + 1].getBoundingClientRect().x);
+        let differenceX = itemX - wrapX; 
+        console.log(i)
+        CLSFeedbackCarouselWrap.scrollBy({
+            top: 0,
+            left: differenceX,
+        });
         i++;
+
     })
 }
 carousel()
+
+
 
 CLSHeaderBurger.addEventListener('click', function() {
     CLSHeader.classList.toggle('active');
