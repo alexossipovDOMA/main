@@ -564,9 +564,9 @@ button {
 }
 .documents__items {
     display: flex;
+    gap: 1.6%;
     flex-wrap: wrap;
     overflow: hidden; 
-    justify-content: space-between; 
 }
 .documents__item:nth-child(n+5) {
     display: none;
@@ -581,6 +581,9 @@ button {
     max-height: 375px;
     object-fit: contain;
 }
+.documents__item:last-child {
+    margin-right: auto;
+}
 .documents__item > h2 {
     text-align: center;
     display: block;
@@ -592,7 +595,9 @@ button {
 }
 .documents__btn {
     display: block;
-    width: 315px;
+    max-width: 315px;
+    width: 100%;
+    min-width: 150px;
     height: 56px;
     border-radius: 16px;
     margin: 0 auto;
@@ -613,6 +618,9 @@ button {
     .documents__item {
         max-width: 366px;
         width: 100%;
+    }
+    .documents__item:last-child {
+        margin-right: unset;
     }
 } 
 

@@ -48,10 +48,6 @@ function carousel() {
             }
         })
         
-    
-
-    
-
     /*Prev*/
     CLSFeedbackBtnPrevious.addEventListener('click', () => {
         
