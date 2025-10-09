@@ -1,6 +1,8 @@
 const body = document.querySelector('body');
 const CLSHeader = document.querySelector('.header');
 const CLSHeaderBurger = document.querySelector('.header__burger');
+const CLSHeader_menuItem = document.querySelectorAll('.header__menu-item > a');
+const CLSHeader__menuBtn = document.querySelector('.header__menu-btn');
 const CLSDocumentsBtn = document.querySelector('.documents__btn');
 const CLSDocumentsItem = document.querySelectorAll('.documents__item');
 const CLSFeedbackBtnPrevious = document.querySelector('.carousel-text-items__btn-previous');
@@ -98,12 +100,22 @@ function carousel() {
 }
 carousel()
 
+console.log()
+function clickItemInHeader() {
+    let Header__tegAAndButton = [
+        CLSHeaderBurger,
+        ...CLSHeader_menuItem,
+        CLSHeader__menuBtn,
+    ]
 
-
-CLSHeaderBurger.addEventListener('click', function() {
-    CLSHeader.classList.toggle('active');
-    body.classList.toggle('noScroll');
-})
+    Header__tegAAndButton.forEach((item) => {
+        item.addEventListener('click', function() {
+            CLSHeader.classList.toggle('active');
+            body.classList.toggle('noScroll');
+        })
+    })
+}
+clickItemInHeader()
 
 CLSDocumentsBtn.addEventListener('click', function() {
     if(CLSDocumentsItem[0].style.display === 'block') {
