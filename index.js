@@ -100,22 +100,30 @@ function carousel() {
 }
 carousel()
 
-console.log()
-function clickItemInHeader() {
+function openAndClosedHeader() {
     let Header__tegAAndButton = [
-        CLSHeaderBurger,
         ...CLSHeader_menuItem,
         CLSHeader__menuBtn,
     ]
 
-    Header__tegAAndButton.forEach((item) => {
-        item.addEventListener('click', function() {
+    function clickOnItem() {
+        CLSHeaderBurger.addEventListener('click', function() {
             CLSHeader.classList.toggle('active');
             body.classList.toggle('noScroll');
         })
-    })
+
+        Header__tegAAndButton.forEach((item) => {
+            item.addEventListener('click', function() {
+
+                CLSHeader.classList.remove('active');
+                body.classList.remove('noScroll');
+
+            })
+        })    
+    }
+    clickOnItem()
 }
-clickItemInHeader()
+openAndClosedHeader()
 
 CLSDocumentsBtn.addEventListener('click', function() {
     if(CLSDocumentsItem[0].style.display === 'block') {
