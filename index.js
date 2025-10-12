@@ -10,6 +10,8 @@ const CLSFeedbackBtnNext = document.querySelector('.carousel-text-items__btn-nex
 const CLSFeedbackCarouselWrap = document.querySelector('.carousel-text-items__wrap');
 const CLSFeedbackCarouselItem = document.querySelectorAll('.carousel-text-items__item');
 
+
+
 function carousel() {
     let i = 0;
     let num;

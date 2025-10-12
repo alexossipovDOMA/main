@@ -30,6 +30,35 @@ button {
     border: none;
     user-select: none;
 }
+.massage-about-sending {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    
+}
+.massage-about-sending .wrap {
+    width: 80%;
+    height: 50vh;
+    position: relative;
+    border-radius: 15px;
+    background-color: var(--gray-50);
+    margin: 24vh auto;
+    text-align: center;
+    transition: all 0.25s ease;
+}
+.massage-about-sending img {
+    display: inline-block;
+    margin-top: 19vh;
+    width: 100px;
+    height: 100px;
+
+}
+.massage-about-sending h1 {
+   margin-top: 2%;
+}
 /*---Header---*/
 .header {
     height: 192px;
